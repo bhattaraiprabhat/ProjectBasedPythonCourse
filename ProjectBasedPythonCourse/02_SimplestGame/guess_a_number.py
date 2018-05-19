@@ -23,7 +23,7 @@ while done==False:
     #Note how to increment counter by one
     attempt_count+=1
     #Note that guess_a_number is a string. 
-    guess_a_number= input ("Guess a number between" + str(lower_limit) + "and" \
+    guess_a_number= input ("Guess a number between " + str(lower_limit) + " and " \
             + str(upper_limit)+ " :  ")
     #convert string to integer
     guess_a_number_in_int = int(guess_a_number)
