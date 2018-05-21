@@ -25,6 +25,8 @@ while done==False:
     #Note that guess_a_number is a string. 
     guess_a_number= input ("Guess a number between " + str(lower_limit) + " and " \
             + str(upper_limit)+ " :  ")
+    #Many checks are required to address what if there is no number entered or
+    #string is entered. 
     #convert string to integer
     guess_a_number_in_int = int(guess_a_number)
 
@@ -38,5 +40,7 @@ while done==False:
     else:
         print ("Yeeee! Your guess is right!")
         done= True
+print ()
 print ("Great! You won the game in " + str(attempt_count)+" attempts!")
+print ()
 
