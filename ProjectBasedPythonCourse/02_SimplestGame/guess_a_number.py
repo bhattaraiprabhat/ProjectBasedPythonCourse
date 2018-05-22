@@ -13,8 +13,8 @@ print ("########### Guess a Number  ###############")
 print ("###########################################")
 print ()
 
-lower_limit =5
-upper_limit =95
+lower_limit =random.randint(0,20)
+upper_limit =random.randint(30,100)
 a_number = random.randint(lower_limit,upper_limit)
 
 done= False
@@ -28,6 +28,12 @@ while done==False:
     #Many checks are required to address what if there is no number entered or
     #string is entered. 
     #convert string to integer
+    if guess_a_number=="":
+        print ("Ups... you didn't enter anything!")
+        continue
+    if not guess_a_number.isdigit():
+        print ("Ups... you didn't enter a number!")
+        continue
     guess_a_number_in_int = int(guess_a_number)
 
     #note a back-slash(\) at the end of line to write in new line
@@ -40,7 +46,8 @@ while done==False:
     else:
         print ("Yeeee! Your guess is right!")
         done= True
-print ()
-print ("Great! You won the game in " + str(attempt_count)+" attempts!")
-print ()
+    if (done):
+        print ()
+        print ("Great! You won the game in " + str(attempt_count)+" attempts!")
+        print ()
 
